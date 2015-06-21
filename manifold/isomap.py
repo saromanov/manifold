@@ -6,11 +6,14 @@ class Isomap():
     def __init__(self,*args,**kwargs):
         pass
 
-    def fit(self,X, num):
+    def fit(self,X, num, method='dijkstra'):
         # Construct k-neigh. graph
         knn = KNN(num).fit(X)
         #Find shortest path
-        result = dijkstra(knn)
+        if method == 'dijkstra':
+            result = dijkstra(knn)
+        else:
+            result = shortest_path, method=method)
         #Multidimensional scaling
         #Can be uesed Kernel PCA
         model = KernelPCA(n_components=num)
