@@ -15,7 +15,7 @@ class Isomap():
         else:
             result = shortest_path, method=method)
         #Multidimensional scaling
-        #Can be uesed Kernel PCA
+        #Can be used Kernel PCA
         model = KernelPCA(n_components=num)
         return model.fit_transform(result)
 
