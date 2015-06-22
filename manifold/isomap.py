@@ -13,7 +13,7 @@ class Isomap():
         if method == 'dijkstra':
             result = dijkstra(knn)
         else:
-            result = shortest_path, method=method)
+            result = shortest_path(knn, method=method)
         #Multidimensional scaling
         #Can be used Kernel PCA
         model = KernelPCA(n_components=num)
